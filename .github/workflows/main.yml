@@ -25,10 +25,6 @@ jobs:
             flutter build web --release
           working-directory: ./
 
-        - name: Print env
-          run: |
-            echo ${{ secrets.FIREBASE_TOKEN }} | sed -e 's/\(.\)/\1 /g'
-
         # Deploy Firebase Hosting
         - name: Deploy Firebase Hosting
           uses: w9jds/firebase-action@master
