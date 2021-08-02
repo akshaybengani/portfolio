@@ -1,5 +1,9 @@
-name: Build and Release APK
-on: push
+name: Build and deploy on firebase hosting
+on:
+  push:
+    branches:
+      - prod
+
 jobs:
     hosting:
       name: Deploy Website
@@ -11,7 +15,7 @@ jobs:
         # Install Flutter command
         - uses: subosito/flutter-action@v1
           with:
-            channel: 'dev'
+            channel: 'stable'
 
         # Build Website
         - name: Build Website
@@ -25,7 +29,7 @@ jobs:
         - name: Deploy Firebase Hosting
           uses: w9jds/firebase-action@master
           with:
-            args: deploy --only hosting:web-johannesmilke
+            args: deploy --only hosting:akshay-bengani
           env:
             FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
             PROJECT_PATH: ./
