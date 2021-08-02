@@ -25,6 +25,9 @@ jobs:
             flutter build web --release
           working-directory: ./
 
+        - name: print token
+          run: echo ${{ secrets.FIREBASE_TOKEN }}
+
         # Deploy Firebase Hosting
         - name: Deploy Firebase Hosting
           uses: w9jds/firebase-action@master
