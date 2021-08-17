@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/utils/constants.dart';
 import 'package:portfolio/widgets/desktop_about.dart';
+import 'package:portfolio/widgets/desktop_experience.dart';
 import 'package:portfolio/widgets/desktop_home.dart';
 import 'package:portfolio/widgets/desktop_navbar.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -43,21 +44,27 @@ class _HomePageState extends State<HomePage> {
   }
 
   Widget desktopView(final BuildContext context) {
-    return Container(
-      child: SingleChildScrollView(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            DesktopNavbar(),
-            DesktopHome(),
-            DesktopAbout(),
-            Container(
-              height: 200,
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        DesktopNavbar(),
+        Expanded(
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                DesktopHome(),
+                DesktopAbout(),
+                DesktopExperience(),
+                Container(
+                  height: 200,
+                ),
+              ],
             ),
-          ],
+          ),
         ),
-      ),
+      ],
     );
   }
 }

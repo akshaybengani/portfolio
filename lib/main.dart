@@ -12,6 +12,7 @@ class PortfolioApp extends StatelessWidget {
     return MaterialApp(
       title: "Akshay Bengani Portfolio",
       debugShowCheckedModeBanner: false,
+      color: kBackgroundColor,
       themeMode: ThemeMode.dark,
       darkTheme: Theme.of(context).copyWith(
         platform: TargetPlatform.android,

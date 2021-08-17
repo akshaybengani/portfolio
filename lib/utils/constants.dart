@@ -7,8 +7,8 @@ const Color kDangerColor = Color.fromRGBO(249, 77, 30, 1);
 const Color kTextColor = Color.fromRGBO(255, 255, 255, 1);
 
 const kScreenBreakPoints = ScreenBreakpoints(
-  desktop: 600,
-  tablet: 400,
+  desktop: 800,
+  tablet: 600,
   watch: 200,
 );
 

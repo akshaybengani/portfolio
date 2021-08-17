@@ -6,7 +6,7 @@ class DesktopNavbar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.symmetric(
-        vertical: 30,
+        vertical: 10,
         horizontal: 50,
       ),
       width: MediaQuery.of(context).size.width / 1.7,
